@@ -6,8 +6,6 @@ QUEEN_DIRECTIONS = ROOK_DIRECTIONS + BISHOP_DIRECTIONS
 
 
 def to_grid(board):
-    """Turn the board string into a list of lists of single characters,
-    e.g. "R.\\n.K" -> [['R', '.'], ['.', 'K']]."""
     rows = board.split('\n')
     if rows and rows[-1] == '':
         rows = rows[:-1]
@@ -15,7 +13,6 @@ def to_grid(board):
 
 
 def is_valid_grid(grid):
-    """Board must be a non-empty N x N square."""
     if not isinstance(grid, list) or len(grid) == 0:
         return False
     n = len(grid)
@@ -26,11 +23,6 @@ def is_valid_grid(grid):
 
 
 def format_matrix(matrix):
-    """Pretty-print a list of lists the way the screenshots show it:
-    [['R', '.', '.', '.']
-     ['.', '.', 'K', '.']
-     ['P', '.', 'P', '.']
-     ['.', '.', '.', '.']]"""
     n = len(matrix)
     lines = []
     for i, row in enumerate(matrix):
@@ -42,12 +34,6 @@ def format_matrix(matrix):
 
 
 def checkmate(board):
-    """
-    Debug-style version: prints the board, its shape, the squares every
-    enemy piece can reach ("Check Range"), and finally Success/Fail.
-    On undefined input (not a string, board not square) it stays silent.
-    On an invalid number of Kings it prints the K-count error instead.
-    """
     try:
         if not isinstance(board, str):
             return

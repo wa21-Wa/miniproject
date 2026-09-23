@@ -77,7 +77,7 @@ def checkmate(board):
                     directions = BISHOP_DIRECTIONS
                 elif cell == 'R':
                     directions = ROOK_DIRECTIONS
-                else:  # 'Q'
+                else:
                     directions = QUEEN_DIRECTIONS
 
                 for dr, dc in directions:

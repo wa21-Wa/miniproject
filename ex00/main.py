@@ -1,23 +1,25 @@
 from checkmate import checkmate
 
+# def main():
+#     board = """\
+# R...
+# ....
+# ....
+# ...K\
+# """
+    # checkmate(board)
+    
 def main():
     board = """\
-R...
-....
-....
-...K\
+-!ZpQcr
+EitsXgO
+.V56hmL
+zojJ%#f
+9$HD@G7
+AkCqMxv
+TWu=KNl\
 """
     checkmate(board)
-    
-#def main():
-#    board = ("-!ZpQcr\n"
-#     "EitsXgO\n"
-#     ".V56hmL\n"
-#      "zojJ%#f\n"
-#     "9$HD@G7\n"
-#     "AkCqMxv\n"
-#     "TWu=KNl")
-#   checkmate(board)
 
 if __name__ == "__main__":
     main()

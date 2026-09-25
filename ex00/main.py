@@ -2,7 +2,15 @@ from checkmate import checkmate
 
 
 def main():
-    board = "R...\n.K..\n..P.\n...."
+   board = (
+      "-!ZpQcr\n"
+      "EitsXgO\n"
+      ".V56hmL\n"
+      "zojJ%#f\n"
+      "9$HD@G7\n"
+      "AkCqMxv\n"
+      "TWu=KNl"
+    )
     checkmate(board)
 
 

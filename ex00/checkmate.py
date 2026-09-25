@@ -43,9 +43,6 @@ def checkmate(board):
             print("Error: Board is not a square (N x N)")
             return
 
-        n = len(grid)
-        print(format_matrix(grid))
-        print((n, n))
 
         king_positions = [
             (r, c) for r in range(n) for c in range(n) if grid[r][c] == 'K'
@@ -96,9 +93,6 @@ def checkmate(board):
             if range_grid[r][c] == '.':
                 range_grid[r][c] = 'X'
 
-        print("Check Range:")
-        print(format_matrix(range_grid))
-        print("Success" if is_check else "Fail")
     except Exception as e:
         print("ERROR:", e)
         return
